@@ -21,14 +21,14 @@ namespace Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<InfoMsg> getSaluti2(string Nome)  
         {
-            return Ok(new InfoMsg(DateTime.Today, $"Saluti {Nome}, sono la tua web api aggiornata in Azure App Services"));
+            return Ok(new InfoMsg(DateTime.Today, $"Saluti {Nome}, sono la tua web api aggiornata con GitHub in Azure App Services"));
         }
 
         [ProducesResponseType(StatusCodes.Status200OK)]
         [HttpGet("{Nome}/{version}")]
         public ActionResult<InfoMsg>getSaluti3(string Nome, string version)
         {
-            return Ok(new InfoMsg(DateTime.Today, $"Saluti {Nome}, sono la versione {version} della web api"));
+            return Ok(new InfoMsg(DateTime.Today, $"Saluti {Nome}, sono la versione {version} della web api aggiornata con GitHub"));
         }
     }
 }
